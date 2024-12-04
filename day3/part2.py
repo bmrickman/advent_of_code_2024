@@ -58,9 +58,7 @@ while i <= len(instructions) - 1:
         pass
     elif expect_dont():
         pass
-    elif do is False:
-        i = i + 1
-    elif expect_mult():
+    elif do and expect_mult():
         pass
     else:
         i = i + 1
