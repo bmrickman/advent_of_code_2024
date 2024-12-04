@@ -11,19 +11,15 @@ def expect_mult():
         i = i + 4
         num1 = ""
         num2 = ""
-        char = instructions[i]
-        while char.isnumeric():
-            num1 = num1 + char
+        while instructions[i].isnumeric():
+            num1 = num1 + instructions[i]
             i = i + 1
-            char = instructions[i]
-        if char == ",":
+        if instructions[i] == ",":
             i = i + 1
-            char = instructions[i]
-            while char.isnumeric():
-                num2 = num2 + char
+            while instructions[i].isnumeric():
+                num2 = num2 + instructions[i]
                 i = i + 1
-                char = instructions[i]
-            if char == ")":
+            if instructions[i] == ")":
                 total = total + (int(num1) * int(num2))
 
 
